@@ -31,7 +31,8 @@ const fichaGeneralSchema = new Schema({
 // Definir el esquema principal del paciente
 const pacienteSchema = new Schema({
   nombre: { type: String, required: true },  // Nombre del paciente
-  año: { type: Number, required: true },     // Año (como el año de nacimiento)
+  ano: { type: Number, required: true },     // Año (como el año de nacimiento)
+  rut: { type: Number, required: true },     // Año (como el año de nacimiento)
   prevision: { type: String, required: true },  // Tipo de previsión médica
   celular: { type: String, required: true },    // Número de celular
   estadocivil: { type: String, required: true },  // Estado civil del paciente

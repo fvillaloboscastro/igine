@@ -1,68 +1,84 @@
 /* Estilos generales del contenedor */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background-color: #2c2f38;
-    color: #fff;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Estilo del encabezado */
-  .header {
-    margin-bottom: 20px;
-  }
-  
-  .header h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    padding: 10px 20px;
-    border: 1px solid #a493e9;
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 30px;
-    width: 320px;
-  }
-  
-  /* Estilos para la ficha */
-  .ficha {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background-color: #3d4049;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #a493e9;
-    width: 600px;
-  }
-  
-  .field {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .field label {
-    font-size: 12px;
-    color: #a493e9;
-    margin-bottom: 5px;
-  }
-  
-  .field input {
-    padding: 10px;
-    background-color: #2c2f38;
-    border: 1px solid #52555d;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-  }
-  
-  .field input:focus {
-    outline: none;
-    border-color: #a493e9;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2C2F38;
+  color: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #A493E9;
+  width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+.container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  padding: 10px 20px;
+  border: 1px solid #A493E9;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* Estilos para la ficha (grid de dos columnas) */
+.ficha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Dos columnas */
+  gap: 20px;
+  background-color: #3D4049;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #A493E9;
+  width: 100%;
+}
+
+/* Estilos para cada campo */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  color: #A493E9;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.field input {
+  padding: 10px;
+  background-color: #2C2F38;
+  border: 1px solid #52555D;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #A493E9;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #A493E9;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 16px;
+  cursor: pointer;
+  grid-column: span 2;  /* Ocupa toda la fila */
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #9185D9;
+}

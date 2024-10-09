@@ -2,15 +2,36 @@
 GET http://localhost:3000/api/pacientes
 
 ###
+### Actualizar un paciente existente
+PUT http://localhost:3000/api/pacientes/6706e547bafed904943c5ab4
+Content-Type: application/json
+
+{
+  "_id": "6706e547bafed904943c5ab4",
+    "nombre": "Juan Pérez",
+    "ano": 1990,
+    "rut": 188888882,
+    "prevision": "Fonasa",
+    "celular": "123456789",
+    "estadocivil": "Soltero",
+    "correo": "juan.perez@gmail.com",
+    "createdAt": "2024-10-09T20:19:19.884Z",
+    "updatedAt": "2024-10-09T20:19:19.884Z"
+}
+
 ###
 POST http://localhost:3000/api/pacientes
 Content-Type: application/json
 
 {
   "nombre": "Juan Pérez",
-  "año": 1990,
+  "ano": 1990,
+  "rut": 188888882,
   "prevision": "Fonasa",
   "celular": "123456789",
   "estadocivil": "Soltero",
   "correo": "juan.perez@gmail.com"
 }
+
+### Eliminar un paciente por ID
+DELETE http://localhost:3000/api/pacientes/67060e916c3218932bf72b31
