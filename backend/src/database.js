@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://villadelobos:123qweasd@gine.copjd.mongodb.net/mi-base-datos?w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: false
 })
   .then(() => console.log('Conectado a MongoDB Atlas'))
   .catch(err => console.error('Error conectando a MongoDB:', err));

@@ -2,4 +2,15 @@
 GET http://localhost:3000/api/pacientes
 
 ###
+###
 POST http://localhost:3000/api/pacientes
+Content-Type: application/json
+
+{
+  "nombre": "Juan Pérez",
+  "año": 1990,
+  "prevision": "Fonasa",
+  "celular": "123456789",
+  "estadocivil": "Soltero",
+  "correo": "juan.perez@gmail.com"
+}

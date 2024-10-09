@@ -1,7 +1,7 @@
 const pacienteCtrl = {};
 
 
-const paciente = require('../models/paciente')
+const Paciente = require('../models/paciente')
 
 // Obtener todos los pacientes
 pacienteCtrl.getPacientes = async (req, res) => {
