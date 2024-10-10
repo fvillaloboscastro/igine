@@ -26,23 +26,23 @@ export class AuthService {
   }
 
   signupUser(
-    username: string,
+    email: string,
     password: string
   ): Observable<{ message: string }> {
-    const authData: AuthModel = { username: username, password: password };
+    const authData: AuthModel = { email: email, password: password };
     return this.http.post<{ message: string }>(
-      'http://localhost:3000/sign-up/',
+      'http://localhost:3000/api/auth/sign-up',
       authData
     );
   }
 
   loginUser(
-    username: string,
+    email: string,
     password: string
   ): Observable<{ token: string; expiresIn: number }> {
-    const authData: AuthModel = { username, password };
+    const authData: AuthModel = { email, password };
     return this.http.post<{ token: string; expiresIn: number }>(
-      'http://localhost:3000/login/',
+      'http://localhost:3000/api/auth/login',
       authData
     );
   }
@@ -52,11 +52,11 @@ export class AuthService {
     if (this.token) {
       this.authenticatedSub.next(true);
       this.isAuthenticated = true;
-      this.router.navigate(['/']);
+      this.router.navigate(['/paciente']); // Redirige a la ruta después de guardar el token
       this.setLogoutTimer(res.expiresIn);
       const now = new Date();
       const expiresDate = new Date(now.getTime() + res.expiresIn * 1000);
-      this.storeLoginDetails(this.token, expiresDate);
+      this.storeLoginDetails(this.token, expiresDate); // Guardar detalles en el localStorage
     }
   }
 

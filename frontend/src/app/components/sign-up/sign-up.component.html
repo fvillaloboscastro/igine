@@ -1,13 +1,21 @@
-<div class="row">
-    <div class="col">
-        <form (ngSubmit)="onSubmit()" [formGroup]='signupForm'>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input class="form-control" formControlName="username" type="text">
-                <label for="password">Password</label>
-                <input class="form-control" formControlName="password" type="password">
-            </div>
-            <button [disabled]="!signupForm.valid" type="submit" class="btn btn-success">Sign Up</button>
-        </form>
-    </div>
-</div>
+<div class="register-form-container">
+    <h2>REGISTRARSE</h2>
+    <form>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="joserojas@gmail.com" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" placeholder="************" required>
+        </div>
+      </div>
+  
+      <button type="submit">REGISTRARSE</button>
+    </form>
+  
+    <p class="login-link">¿YA TIENES UNA CUENTA? → <a href="#">INICIA SESIÓN</a></p>
+  </div>
+  

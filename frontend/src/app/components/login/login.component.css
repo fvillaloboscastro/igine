@@ -1,0 +1,83 @@
+/* Estilo para el contenedor del formulario de inicio de sesión */
+.login-form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #2c2f38;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.login-form-container h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos generales para los grupos de entrada */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.input-group label {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Estilo para los campos de texto */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #3f4451;
+    background-color: #3f4451;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Contenedor de la contraseña */
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Icono de mostrar contraseña */
+.password-container .show-password {
+    cursor: pointer;
+    color: #a493e9; /* Color del icono */
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* Estilos del botón de inicio de sesión */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #7d3cff;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #6a33d6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-form-container {
+        padding: 20px;
+    }
+}

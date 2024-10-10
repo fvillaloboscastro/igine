@@ -1,59 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ficha Paciente</title>
-    <link rel="stylesheet" href="paciente.component.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h2>Nombre del Paciente</h2>
-        <!-- Aquí el doctor puede ingresar el nombre -->
-      </div>
+<div class="patient-info">
+  <h2 class="title">Ficha Paciente</h2>
 
-      <div class="ficha">
-        <div class="field">
-          <label>RUT</label>
-          <input type="text" placeholder="Ingrese el RUT" />
-        </div>
-
-        <div class="field">
-          <label>FECHA 1º ER CONTROL</label>
-          <input type="date" />
-        </div>
-
-        <div class="field">
-          <label>PREVISIÓN</label>
-          <input type="text" placeholder="Ingrese la Previsión" />
-        </div>
-
-        <div class="field">
-          <label>EDAD</label>
-          <input type="number" placeholder="Ingrese la Edad" />
-        </div>
-
-        <div class="field">
-          <label>G. SANGUÍNEO</label>
-          <input type="text" placeholder="Ingrese el Grupo Sanguíneo" />
-        </div>
-
-        <div class="field">
-          <label>ESTADO CIVIL</label>
-          <input type="text" placeholder="Ingrese el Estado Civil" />
-        </div>
-
-        <div class="field">
-          <label>DIRECCIÓN</label>
-          <input type="text" placeholder="Ingrese la Dirección" />
-        </div>
-
-        <div class="field">
-          <label>TELÉFONO</label>
-          <input type="tel" placeholder="Ingrese el Teléfono" />
-        </div>
-      </div>
+  <div class="info-grid">
+    <div class="info-item">
+      <label for="rut">RUT</label>
+      <input type="text" id="rut" value="" placeholder="">
     </div>
-  </body>
-</html>
+    <div class="info-item">
+      <label for="control">FECHA 1°ER CONTROL</label>
+      <input type="text" id="control" value="" placeholder="">
+    </div>
+    <div class="info-item">
+      <label for="prevision">PREVISION</label>
+      <input type="text" id="prevision" value="" placeholder="">
+    </div>
+    <div class="info-item">
+      <label for="edad">EDAD</label>
+      <input type="text" id="edad" value="" placeholder="">
+    </div>
+    <div class="info-item">
+      <label for="sangre">G.SANGUINEO</label>
+      <input type="text" id="sangre" value="" placeholder="">
+    </div>
+    <div class="info-item">
+      <label for="estado-civil">ESTADO CIVIL</label>
+      <input type="text" id="estado-civil" value="" placeholder="">
+    </div>
+    <div class="info-item">
+      <label for="direccion">DIRECCIÓN</label>
+      <input type="text" id="direccion" value="" placeholder="">
+    </div>
+    <div class="info-item">
+      <label for="telefono">TELEFONO</label>
+      <input type="text" id="telefono" value="" placeholder="">
+    </div>
+  </div>
+</div>

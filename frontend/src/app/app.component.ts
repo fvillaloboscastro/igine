@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from './shared/auth-service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  constructor(private authService: AuthService) {}
+export class AppComponent {
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    this.authService.authenticateFromLocalStorage();
+  // Este método verifica si estamos en las rutas de login o signup
+  isLoginOrSignup(): boolean {
+    const currentRoute = this.router.url;
+    return currentRoute === '/login' || currentRoute === '/signup';
   }
-  title = 'my-diary';
 }

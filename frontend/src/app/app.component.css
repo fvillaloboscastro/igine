@@ -1,8 +1,24 @@
-.main-content {
-    margin-left: 250px; /* Espacio dejado para el sidebar */
-    padding: 20px;
-    background-color: #3d4049;
+.sidebar {
     height: 100vh;
+    width: 250px;
+    background-color: #2c2f38;
     color: #fff;
-  }
-  
+    position: fixed; /* Fijo en el lado izquierdo */
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Para asegurarte que los paddings no expanden el ancho */
+}
+
+.main-content {
+    margin-left: 250px; /* Deja espacio para el sidebar */
+    padding: 20px; /* Añadir un padding alrededor del contenido */
+    background-color: #f8f9fa;
+    height: 100vh;
+}
+
+.login-form {
+    padding: 40px;
+    margin-left: 250px; /* Alinea correctamente con el espacio del sidebar */
+}
+

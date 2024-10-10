@@ -1,32 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../shared/auth-service';
-
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/shared/auth-service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit {
-  loginForm: FormGroup = new FormGroup({
-    // Inicialización de loginForm
-    username: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required]),
-  });
+export class LoginComponent {
+  loginForm: FormGroup;
 
-  constructor(private authService: AuthService) {}
-
-  ngOnInit(): void {
-    // El formulario ya está inicializado, no es necesario inicializarlo de nuevo aquí
+  constructor(private fb: FormBuilder, private authService: AuthService) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
   }
 
   onSubmit() {
     if (this.loginForm.valid) {
-      // Verifica si el formulario es válido antes de enviar
-      const { username, password } = this.loginForm.value;
-      this.authService.loginUser(username, password); // Envía los datos al servicio de autenticación
+      const { email, password } = this.loginForm.value;
+      this.authService.loginUser(email, password).subscribe({
+        next: (res) => {
+          this.authService.handleLoginResponse(res);  // Llama a la función para manejar el token y redirigir
+        },
+        error: (err) => {
+          console.log('Error de autenticación', err);
+        }
+      });
     } else {
-      console.log('Formulario no válido'); // Maneja los errores si el formulario no es válido
+      console.log('Formulario no válido');
     }
   }
 }
+  
