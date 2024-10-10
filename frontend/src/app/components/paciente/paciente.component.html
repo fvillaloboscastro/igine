@@ -2,14 +2,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ficha Paciente</title>
-
 </head>
 <body>
   <div class="container">
-    <!-- Aquí mostramos el nombre del paciente en el encabezado -->
-    <h2><input type="text" [(ngModel)]="paciente.nombre" name="nombre" placeholder="Ingrese el nombre del paciente" required></h2>
-  
+    <h2>Ficha Paciente</h2>
     <form (ngSubmit)="guardarPaciente()" class="ficha">
       <div class="field">
         <label>RUT</label>

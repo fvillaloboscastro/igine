@@ -4,11 +4,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #2C2F38;
+  background-color: #3D4049;
   color: #FFF;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #A493E9;
   width: 800px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
@@ -20,7 +19,7 @@
   font-weight: bold;
   color: #FFF;
   padding: 10px 20px;
-  border: 1px solid #A493E9;
+  border: 3px solid #A493E9;
   border-radius: 8px;
   text-align: center;
   margin-bottom: 30px;
