@@ -4,18 +4,19 @@ import { FichaGinecologicaComponent } from './components/fichas-medicas/ficha-gi
 import { FichaObstetricaComponent } from './components/fichas-medicas/ficha-obstetrica/ficha-obstetrica.component';
 import { FichaExamenComponent } from './components/fichas-medicas/ficha-examen/ficha-examen.component';
 import { PacienteComponent } from './components/paciente/paciente.component';
-
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 const routes: Routes = [
+  { path: 'sign-up', component: SignUpComponent },
   { path: 'ficha-ginecologica', component: FichaGinecologicaComponent },
   { path: 'ficha-obstetrica', component: FichaObstetricaComponent },
   { path: 'ficha-examenes', component: FichaExamenComponent },
   { path: 'paciente', component: PacienteComponent },
-  { path: '', redirectTo: '/paciente', pathMatch: 'full' },
-  { path: '**', redirectTo: '/paciente' }
+  { path: '', redirectTo: '/sign-up', pathMatch: 'full' },
+  { path: '**', redirectTo: '/sign-up' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

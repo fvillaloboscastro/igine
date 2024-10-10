@@ -7,6 +7,14 @@ import { FichaGinecologicaComponent } from './components/fichas-medicas/ficha-gi
 import { FichaObstetricaComponent } from './components/fichas-medicas/ficha-obstetrica/ficha-obstetrica.component';
 import { FichaExamenComponent } from './components/fichas-medicas/ficha-examen/ficha-examen.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { DiaryComponent } from './components/diary/diary.component';
+import { DiaryFormComponent } from './components/diary-form/diary-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AuthInterceptor } from './shared/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -15,13 +23,22 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FichaGinecologicaComponent,
     FichaObstetricaComponent,
     FichaExamenComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent,
+    DiaryComponent,
+    DiaryFormComponent,
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
