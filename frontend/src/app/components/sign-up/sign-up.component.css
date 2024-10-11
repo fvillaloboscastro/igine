@@ -1,0 +1,79 @@
+/* Contenedor del formulario de registro */
+.register-form-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #2c2f38;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .password-container {
+    position: relative;
+  }
+  
+  .show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #a493e9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #6c4bda;
+  }
+  
+  /* Enlace para iniciar sesión */
+  .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #a493e9;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    color: #fff;
+  }
+  

@@ -1,6 +1,9 @@
-<app-sidebar></app-sidebar> <!-- Sidebar siempre visible -->
+<!-- Si no estamos en las rutas de login o signup, mostramos el sidebar -->
+<ng-container *ngIf="!isLoginOrSignup()">
+  <app-sidebar></app-sidebar> <!-- Sidebar normal -->
+</ng-container>
 
-<!-- Espacio para el contenido principal -->
+<!-- Contenido principal, sin importar la ruta -->
 <div class="main-content">
   <router-outlet></router-outlet> <!-- Aquí se mostrarán los componentes -->
 </div>

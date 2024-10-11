@@ -1,6 +1,6 @@
 // database.js
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Conectar a MongoDB Atlas
 mongoose.connect('mongodb+srv://villadelobos:123qweasd@gine.copjd.mongodb.net/mi-base-datos?w=majority', {
