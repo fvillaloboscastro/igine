@@ -3,12 +3,23 @@
     <h2>Project Name</h2>
   </div>
   <ul>
-    <li><a routerLink="/paciente" routerLinkActive="active">Datos Generales</a></li>
-    <li><a routerLink="/almacenamiento" routerLinkActive="active">Almacenamiento</a></li>
-    <li><a routerLink="/fichas" routerLinkActive="active">Ficha de Exámenes</a></li>
-    <li><a routerLink="/ginecologica" routerLinkActive="active">Ficha Ginecológica</a></li>
-    <li><a routerLink="/obstetrica" routerLinkActive="active">Ficha Obstétrica</a></li>
-    <li><a routerLink="/paciente" routerLinkActive="active">Paciente</a></li>
+    <ul>
+      <li>
+        <a routerLink="/paciente" routerLinkActive="active">Datos Generales</a>
+      </li>
+      <li>
+        <a routerLink="/ficha-examenes" routerLinkActive="active">Ficha de Exámenes</a>
+      </li>
+      <li>
+        <a routerLink="/ficha-ginecologica" routerLinkActive="active">Ficha Ginecológica</a>
+      </li>
+      <li>
+        <a routerLink="/ficha-obstetrica" routerLinkActive="active">Ficha Obstétrica</a>
+      </li>
+      <li>
+        <a routerLink="/almacenamiento" routerLinkActive="active">Almacenamiento</a>
+      </li>
+    </ul>
     <li><a (click)="onLogout()">Cerrar Sesión</a></li>
   </ul>
 </div>

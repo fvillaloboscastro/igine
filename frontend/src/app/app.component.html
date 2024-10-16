@@ -1,5 +1,5 @@
 <!-- Si no estamos en las rutas de login o signup, mostramos el sidebar -->
-<ng-container *ngIf="!isLoginOrSignup()">
+<ng-container *ngIf="!isLoginOrSignup() && authService.getIsAuthenticated">
   <app-sidebar></app-sidebar> <!-- Sidebar normal -->
 </ng-container>
 

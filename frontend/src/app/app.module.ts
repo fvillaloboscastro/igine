@@ -16,6 +16,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AuthInterceptor } from './shared/auth-interceptor';
 import { AuthService } from './shared/auth-service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

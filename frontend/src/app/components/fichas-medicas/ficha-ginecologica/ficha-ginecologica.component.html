@@ -1,1 +1,52 @@
-<p>ficha-ginecologica works!</p>
+<div class="ficha-ginecologica-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="fichaGinecologicaForm">
+      <div class="paciente-header">
+        <label for="nombre">Paciente:</label>
+        <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre del paciente" />
+      </div>
+      
+      <div class="campos-grid">
+        <div>
+          <label for="fur">F.U.R</label>
+          <input type="text" id="fur" formControlName="fur" placeholder="Fecha de la última menstruación" />
+        </div>
+        <div>
+          <label for="fur-operacional">F.U.R Operacional</label>
+          <input type="text" id="fur-operacional" formControlName="furOperacional" placeholder="F.U.R Operacional" />
+        </div>
+        <div>
+          <label for="asignacion-familiar">Asignación Familiar</label>
+          <input type="text" id="asignacion-familiar" formControlName="asignacionFamiliar" placeholder="Asignación Familiar" />
+        </div>
+        <div>
+          <label for="licencia-maternal">Fecha Licencia Maternal</label>
+          <input type="text" id="licencia-maternal" formControlName="fechaLicenciaMaternal" placeholder="Fecha de Licencia Maternal" />
+        </div>
+        <div>
+          <label for="fecha-parto">Fecha Parto Probable</label>
+          <input type="text" id="fecha-parto" formControlName="fechaPartoProbable" placeholder="Fecha Probable de Parto" />
+        </div>
+      </div>
+  
+      <div class="datos-ginecologicos-grid">
+        <div><label>FECHA</label><input type="text" formControlName="fecha" placeholder="Fecha de consulta"></div>
+        <div><label>E.G</label><input type="text" formControlName="eg" placeholder="Edad gestacional"></div>
+        <div><label>PESO</label><input type="text" formControlName="peso" placeholder="Peso de la paciente"></div>
+        <div><label>A.U</label><input type="text" formControlName="au" placeholder="Altura uterina"></div>
+        <div><label>LOF</label><input type="text" formControlName="lof" placeholder="Latidos fetales"></div>
+        <div><label>M.FET</label><input type="text" formControlName="mfet" placeholder="Movimiento fetal"></div>
+        <div><label>SISTOLE</label><input type="text" formControlName="sistole" placeholder="Presión sistólica"></div>
+        <div><label>DIASTOLE</label><input type="text" formControlName="diastole" placeholder="Presión diastólica"></div>
+      </div>
+  
+      <div class="detalles-adicionales">
+        <label>DETALLES ADICIONALES</label>
+        <textarea formControlName="detallesAdicionales" placeholder="Observaciones adicionales"></textarea>
+      </div>
+  
+      <div class="boton-enviar">
+        <button type="submit">Guardar cambios</button>
+      </div>
+    </form>
+  </div>
+  

@@ -18,19 +18,21 @@ const validatePassword = (password, hash, salt) => {
 // Registro de nuevo usuario
 exports.register = async (req, res) => {
     try {
-        // Verifica si el email ya existe
-        const existingUser = await UserModel.findOne({ email: req.body.email });
+        const { email, password } = req.body;
+
+        // Verificar si el usuario ya existe
+        const existingUser = await UserModel.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: 'Email already in use' });
         }
 
-        // Hash de la contraseña usando crypto
-        const { salt, hash } = hashPassword(req.body.password);
+        // Hash de la contraseña usando una función hash que tengas definida
+        const { salt, hash } = hashPassword(password);
 
         const newUser = new UserModel({
-            email: req.body.email,
-            password: hash, // Almacena solo el hash de la contraseña
-            salt: salt // Almacena la sal usada para el hash
+            email: email,
+            password: hash, // Almacenar el hash de la contraseña
+            salt: salt
         });
 
         const result = await newUser.save();
@@ -39,11 +41,13 @@ exports.register = async (req, res) => {
             result: result
         });
     } catch (err) {
+        console.error(err); // Registrar el error en la consola del servidor
         res.status(500).json({
-            error: err
+            error: err.message
         });
     }
 };
+
 
 // Inicio de sesión
 exports.login = async (req, res) => {
@@ -71,7 +75,6 @@ exports.login = async (req, res) => {
             const token = jwt.sign(
                 { email: userFound.email, userId: userFound._id },
                 "secret_string",
-                { expiresIn: "1h" }
             );
             return res.status(200).json({
                 token: token,

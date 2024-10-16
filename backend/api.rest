@@ -2,7 +2,34 @@
 GET http://localhost:3000/api/pacientes
 
 ###
+# Probar login de usuario
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "juan.perez@gmail.com",
+  "password": "123456"
+}
+
 ###
+
+# Probar registro de usuario
+POST http://localhost:3000/api/auth/sign-up
+Content-Type: application/json
+
+{
+  "email": "juan.perez@gmail.com",
+  "password": "123456"
+}
+
+###
+
+# Obtener todos los pacientes
+GET http://localhost:3000/api/pacientes
+
+###
+
+# Crear un nuevo paciente
 POST http://localhost:3000/api/pacientes
 Content-Type: application/json
 
@@ -14,3 +41,28 @@ Content-Type: application/json
   "estadocivil": "Soltero",
   "correo": "juan.perez@gmail.com"
 }
+
+###
+
+# Obtener un paciente específico por ID (ejemplo de ID)
+GET http://localhost:3000/api/pacientes/613b1f1f1c4e4b0011a3c9d9
+
+###
+
+# Actualizar un paciente existente (ejemplo de ID)
+PUT http://localhost:3000/api/pacientes/613b1f1f1c4e4b0011a3c9d9
+Content-Type: application/json
+
+{
+  "nombre": "Juan Pérez",
+  "año": 1990,
+  "prevision": "Fonasa",
+  "celular": "987654321",
+  "estadocivil": "Casado",
+  "correo": "juan.perez@gmail.com"
+}
+
+###
+
+# Eliminar un paciente por ID (ejemplo de ID)
+DELETE http://localhost:3000/api/pacientes/613b1f1f1c4e4b0011a3c9d9

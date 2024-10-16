@@ -6,6 +6,9 @@ const mongoose = require('./database'); // Conectar a MongoDB
 
 const app = express();
 
+// Importar rutas
+const authRoutes = require('./routes/auth.routes'); // Asegúrate de que la ruta es correcta
+
 // Configurar el puerto
 app.set('port', process.env.PORT || 3000);  // Aquí configuramos el puerto
 
@@ -22,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));  // Procesa datos de formulari
 
 // Rutas
 app.use('/api/pacientes', require('./routes/pacientes.routes'));
+app.use('/api/auth', authRoutes); // Esto asegura que el login esté disponible en /api/auth/login
 
 // Ruta de ejemplo
 app.get('/', (req, res) => {

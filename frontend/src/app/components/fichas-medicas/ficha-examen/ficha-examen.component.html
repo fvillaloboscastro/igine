@@ -1,1 +1,26 @@
-<p>ficha-examen works!</p>
+<div class="ficha-examen-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="fichaExamenForm">
+      <div class="paciente-header">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" formControlName="fecha" placeholder="Fecha del examen" />
+      </div>
+  
+      <div class="campos-grid">
+        <!-- Grupo de input text -->
+        <div *ngFor="let campo of campos">
+          <input type="text" [formControlName]="campo" placeholder="Input text" />
+        </div>
+      </div>
+  
+      <!-- Detalles adicionales -->
+      <div class="detalles-adicionales">
+        <label>DETALLES ADICIONALES</label>
+        <textarea formControlName="detallesAdicionales" placeholder="Observaciones adicionales"></textarea>
+      </div>
+  
+      <div class="boton-enviar">
+        <button type="submit">Guardar cambios</button>
+      </div>
+    </form>
+  </div>
+  

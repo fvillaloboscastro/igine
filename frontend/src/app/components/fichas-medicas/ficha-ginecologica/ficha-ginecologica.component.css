@@ -1,0 +1,107 @@
+.ficha-ginecologica-container {
+    padding: 20px;
+    background-color: #1c1e2f;
+    border-radius: 10px;
+    color: #fff;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .paciente-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .paciente-header label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .campos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .campos-grid div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .campos-grid label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .campos-grid input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .datos-ginecologicos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .datos-ginecologicos-grid div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .datos-ginecologicos-grid label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .datos-ginecologicos-grid input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .detalles-adicionales {
+    margin-bottom: 30px;
+  }
+  
+  .detalles-adicionales textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .boton-enviar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .boton-enviar button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #157eff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .boton-enviar button:hover {
+    background-color: #0056b3;
+  }
+  

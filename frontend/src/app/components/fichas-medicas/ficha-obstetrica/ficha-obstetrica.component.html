@@ -1,1 +1,50 @@
-<p>ficha-obstetrica works!</p>
+<div class="ficha-obstetrica-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="fichaObstetricaForm">
+      <div class="paciente-header">
+        <label for="nombre">Paciente:</label>
+        <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre del paciente" />
+      </div>
+  
+      <div class="campos-grid">
+        <div>
+          <label for="fecha-ultimo-pap">Fecha último PAP</label>
+          <input type="text" id="fecha-ultimo-pap" formControlName="fechaUltimoPAP" placeholder="Fecha último PAP" />
+        </div>
+        <div>
+          <label for="pap">PAP</label>
+          <input type="text" id="pap" formControlName="pap" placeholder="PAP" />
+        </div>
+        <div>
+          <label for="pap-tomado">PAP Tomado</label>
+          <input type="text" id="pap-tomado" formControlName="papTomado" placeholder="PAP Tomado" />
+        </div>
+        <div>
+          <label for="cirugia-pendiente">Cirugía Pendiente</label>
+          <input type="text" id="cirugia-pendiente" formControlName="cirugiaPendiente" placeholder="Cirugía Pendiente" />
+        </div>
+        <div>
+          <label for="gesta">Gesta</label>
+          <input type="text" id="gesta" formControlName="gesta" placeholder="Gesta" />
+        </div>
+        <div>
+          <label for="para">Para</label>
+          <input type="text" id="para" formControlName="para" placeholder="Para" />
+        </div>
+        <div>
+          <label for="abortos">Abortos</label>
+          <input type="text" id="abortos" formControlName="abortos" placeholder="Abortos" />
+        </div>
+      </div>
+  
+      <!-- Detalles adicionales -->
+      <div class="detalles-adicionales">
+        <label>DETALLES ADICIONALES</label>
+        <textarea formControlName="detallesAdicionales" placeholder="Observaciones adicionales"></textarea>
+      </div>
+  
+      <div class="boton-enviar">
+        <button type="submit">Guardar cambios</button>
+      </div>
+    </form>
+  </div>
+  
