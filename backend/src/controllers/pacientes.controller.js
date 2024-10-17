@@ -1,6 +1,4 @@
 const pacienteCtrl = {};
-
-
 const Paciente = require('../models/paciente')
 
 // Obtener todos los pacientes

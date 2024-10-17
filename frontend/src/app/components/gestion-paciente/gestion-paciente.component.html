@@ -1,0 +1,23 @@
+<div class="buscar-agregar-paciente">
+    <div class="icono">
+      <img src="path-to-icon" alt="icono paciente" class="paciente-icono">
+    </div>
+    <h2>PUEDES BUSCAR O AGREGAR NUEVOS PACIENTES</h2>
+    
+    <div class="formulario">
+      <!-- Buscar Paciente -->
+      <div class="buscar">
+        <label for="buscarPaciente">BUSCAR UNA PACIENTE</label>
+        <input id="buscarPaciente" type="text" [(ngModel)]="nombrePaciente" placeholder="Nombre de la paciente">
+        <button (click)="buscarPaciente()">BUSCAR</button>
+      </div>
+      
+      <!-- Agregar Paciente -->
+      <div class="agregar">
+        <label for="agregarPaciente">AGREGAR UNA PACIENTE</label>
+        <input id="agregarPaciente" type="text" [(ngModel)]="nombreNuevoPaciente" placeholder="Nombre de la paciente">
+        <button (click)="agregarPaciente()">AGREGAR</button>
+      </div>
+    </div>
+  </div>
+  

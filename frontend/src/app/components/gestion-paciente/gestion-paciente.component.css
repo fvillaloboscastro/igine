@@ -1,0 +1,48 @@
+.buscar-agregar-paciente {
+  text-align: center;
+  margin: 50px;
+}
+
+.paciente-icono {
+  width: 100px;
+  height: 100px;
+}
+
+.formulario {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.buscar, .agregar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buscar input, .agregar input {
+  margin-top: 10px;
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+}
+
+.buscar button, .agregar button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #6a1b9a;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buscar button:hover, .agregar button:hover {
+  background-color: #8e24aa;
+}
+
+label {
+  font-size: 1.2em;
+  color: white;
+}
